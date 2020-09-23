@@ -1,0 +1,24 @@
+{
+  "name": "it_ext_website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server public/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DogeSSBM/it_ext_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DogeSSBM/it_ext_website/issues"
+  },
+  "homepage": "https://github.com/DogeSSBM/it_ext_website#readme"
+}
