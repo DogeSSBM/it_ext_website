@@ -1,2 +1,4 @@
-# it_ext_website
-I.T. side project for employee phone extention lookup. The website part.
+# Employee Directory
+
+I.T. side project for employee phone extention lookup. Website only.
+For the server GitHub, [Click Here!](https://github.com/DogeSSBM/it_ext_server)
