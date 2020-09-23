@@ -2,15 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Directory</title>
-    <script src="./index.js"></script>
-    <link href="./style.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Directory</title>
+	<script defer src="./index.js"></script>
+	<link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Employee Directory</h1>
+	<h1>Employee Directory</h1>
+	<form action="" method="get" class="form-search">
+		<div class="form-search">
+			<label for="name">Employee name</label>
+			<input type="text" name="name" id="name">
+
+			<label for="email">Employee email</label>
+			<input type="email" name="email" id="email">
+
+			<label for="extension">Employee extension</label>
+			<input type="extension" name="extension" id="extension">
+
+			<input type="submit" value="Search">
+		</div>
+		<div class="search-result">
+
+		</div>
+	</form>
+
+	<h2>Search Results</h2>
+	<table>
+		<thead>
+			<tr>
+			<th>Name</th><th>Email</th><th>Extension</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>John Doe</td><td>johndoe@email.com</td><td>1234</td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 
 </html>
