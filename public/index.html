@@ -13,23 +13,18 @@
 	<h1>Employee Directory</h1>
 	<form action="" method="get" class="form-search">
 		<div class="form-search">
-			<label for="name">Employee name</label>
-			<input type="text" name="name" id="name">
+			<input type="text" id="first" placeholder="first name">
 
-			<label for="email">Employee email</label>
-			<input type="email" name="email" id="email">
+			<input type="text" id="last" placeholder="last name">
 
-			<label for="extension">Employee extension</label>
-			<input type="extension" name="extension" id="extension">
+			<input type="email" id="email" placeholder="email">
 
-			<input type="submit" value="Search">
-		</div>
-		<div class="search-result">
+			<input type="extension" id="extension" placeholder="extension">
 
+			<button onclick="search">Search</button>
 		</div>
 	</form>
 
-	<h2>Search Results</h2>
 	<table id="directory">
 		<thead>
 			<tr>

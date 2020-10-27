@@ -1,10 +1,8 @@
-
 console.log('Running index.js...');
 
 let url = 'http://localhost:3000/employees';
 
 function insertIntoDirectory() {
-
 	fetch(url)
 		.then(response => response.json())
 		.then(data => {
