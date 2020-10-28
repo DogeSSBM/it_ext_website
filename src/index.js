@@ -13,14 +13,14 @@ function insertIntoDirectory(data = []) {
 	data.forEach(employee => {
 		let row = table.insertRow(-1);
 
-		let id = row.insertCell(0);
-		let firstName = row.insertCell(1);
-		let lastName = row.insertCell(2);
-		let ext = row.insertCell(3);
-		let department = row.insertCell(4);
-		let email = row.insertCell(5);
+		// let id = row.insertCell(0);
+		let firstName = row.insertCell(0);
+		let lastName = row.insertCell(1);
+		let ext = row.insertCell(2);
+		let department = row.insertCell(3);
+		let email = row.insertCell(4);
 
-		id.innerHTML = employee.id;
+		// id.innerHTML = employee.id;
 		firstName.innerHTML = employee.firstName;
 		lastName.innerHTML = employee.lastName;
 		ext.innerHTML = employee.ext;
