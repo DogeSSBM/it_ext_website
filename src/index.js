@@ -8,8 +8,7 @@ function insertIntoDirectory(data = []) {
 	newTbody.innerHTML = '<tr></tr>';
 	newTbody.setAttribute("id", "directory-body");
 
-	oldTbody?.parentNode.replaceChild(newTbody, oldTbody);
-
+	oldTbody.parentNode.replaceChild(newTbody, oldTbody);
 	data.forEach(employee => {
 		let row = table.insertRow(-1);
 
@@ -50,11 +49,11 @@ function search(event) {
 
 	let postData = {};
 	Object.assign(postData,
-		first_name && { first_name },
-		last_name && { last_name },
-		ext && { ext },
-		department && { department },
-		email && { email },
+		first_name	&& { first_name },
+		last_name	&& { last_name },
+		ext		&& { ext },
+		department	&& { department },
+		email		&& { email },
 	);
 
 	let url = 'http://localhost:3000/employees';
@@ -62,6 +61,3 @@ function search(event) {
 		.then(data => insertIntoDirectory(data))
 		.catch(err => console.error(err));
 }
-
-insertIntoDirectory();
-
