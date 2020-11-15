@@ -15,15 +15,19 @@ function insertIntoDirectory(data = []) {
 		// let id = row.insertCell(0);
 		let firstName = row.insertCell(0);
 		let lastName = row.insertCell(1);
-		let ext = row.insertCell(2);
-		let department = row.insertCell(3);
-		let email = row.insertCell(4);
+		let alias = row.insertCell(2);
+		let ext = row.insertCell(3);
+		let department = row.insertCell(4);
+		let position = row.insertCell(5);
+		let email = row.insertCell(6);
 
 		// id.innerHTML = employee.id;
 		firstName.innerHTML = employee.firstName;
 		lastName.innerHTML = employee.lastName;
+		alias.innerHTML = employee.aliasName || '';
 		ext.innerHTML = employee.ext;
 		department.innerHTML = employee.department;
+		position.innerHTML = employee.position;
 		email.innerHTML = employee.email;
 	});
 }
@@ -41,19 +45,23 @@ async function postFetch(url, data) {
 function search(event) {
 	event.preventDefault();
 
-	let first_name = document.getElementById('first').value;
-	let last_name = document.getElementById('last').value;
+	let first_lower = document.getElementById('first').value;
+	let last_lower = document.getElementById('last').value;
+	let alias_lower = document.getElementById('alias').value;
 	let ext = document.getElementById('extension').value;
 	let department = document.getElementById('department').value;
+	let position = document.getElementById('position').value;
 	let email = document.getElementById('email').value;
 
 	let postData = {};
 	Object.assign(postData,
-		first_name	&& { first_name },
-		last_name	&& { last_name },
+		first_lower	&& { first_lower: first_lower.toLowerCase() },
+		last_lower	&& { last_lower: last_lower.toLowerCase() },
+		alias_lower	&& { alias_lower: alias_lower.toLowerCase() },
 		ext		&& { ext },
-		department	&& { department },
-		email		&& { email },
+		department	&& { department: department.toUpperCase() },
+		position	&& { position: position.toUpperCase() },
+		email		&& { email: email.toLowerCase() },
 	);
 
 	let url = 'http://localhost:3000/employees';
